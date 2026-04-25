@@ -1,0 +1,266 @@
+/* =============================================
+   CU Bubbletea — Custom Brand Styles
+   Colors: #000000 (black) + #E29E74 (peach)
+   ============================================= */
+
+/* Google Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* ---- Root overrides ---- */
+:root {
+  --color-accent: #E29E74;
+  --color-accent-hover: #c8845a;
+  --color-accent-light: #f5dfc8;
+  --color-black: #0A0A0A;
+  --color-dark: #111111;
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --hover-transition-duration: 0.3s;
+  --hover-transition-timing: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* ---- Typography ---- */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading) !important;
+  letter-spacing: -0.01em;
+}
+
+body, p, a, span, li, label, input, button {
+  font-family: var(--font-body) !important;
+}
+
+/* ---- Scrollbar styling ---- */
+html {
+  scrollbar-color: #E29E74 #0A0A0A;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E29E74;
+  border-radius: 3px;
+}
+
+/* ---- Selection highlight ---- */
+::selection {
+  background: #E29E74;
+  color: #000000;
+}
+
+/* ---- Announcement bar ---- */
+.announcement-bar {
+  background: #E29E74 !important;
+  color: #000000 !important;
+  font-family: var(--font-body) !important;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.announcement-bar a,
+.announcement-bar p {
+  color: #000000 !important;
+}
+
+/* ---- Header ---- */
+.site-header,
+header-group {
+  background: #000000 !important;
+  border-bottom: 1px solid #E29E7420 !important;
+}
+
+/* ---- Navigation links ---- */
+.header__menu-item,
+.header__menu-item a,
+.header-nav a {
+  color: #F5F0EB !important;
+  transition: color 0.2s ease;
+}
+
+.header__menu-item:hover a,
+.header-nav a:hover {
+  color: #E29E74 !important;
+}
+
+/* ---- Logo text ---- */
+.header__heading-link,
+.header__heading {
+  color: #E29E74 !important;
+  font-family: var(--font-heading) !important;
+  font-size: 1.4rem !important;
+  letter-spacing: 0.02em;
+}
+
+/* ---- Hero section ---- */
+.hero {
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.2) 0%,
+    rgba(0,0,0,0.5) 60%,
+    rgba(0,0,0,0.75) 100%
+  );
+  pointer-events: none;
+}
+
+/* ---- Buttons ---- */
+.button,
+.btn,
+[class*="button--primary"],
+[class*="btn-primary"] {
+  transition: background 0.25s ease, transform 0.15s ease, box-shadow 0.25s ease !important;
+}
+
+.button:hover,
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(226, 158, 116, 0.3) !important;
+}
+
+/* ---- Product cards ---- */
+.card,
+.product-card {
+  background: #111111 !important;
+  border: 1px solid #E29E7420 !important;
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.card:hover,
+.product-card:hover {
+  border-color: #E29E7460 !important;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(226, 158, 116, 0.15) !important;
+}
+
+.card__heading,
+.product-card__title {
+  color: #F5F0EB !important;
+  font-family: var(--font-heading) !important;
+}
+
+.price,
+.price__regular,
+.price__sale {
+  color: #E29E74 !important;
+  font-weight: 500;
+}
+
+/* ---- Section headings ---- */
+.section-heading,
+.collection-header__heading {
+  color: #E29E74 !important;
+  font-family: var(--font-heading) !important;
+}
+
+/* ---- Footer ---- */
+footer,
+.footer {
+  background: #050505 !important;
+  border-top: 1px solid #E29E7425 !important;
+}
+
+.footer__heading {
+  color: #E29E74 !important;
+  font-family: var(--font-heading) !important;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.footer a,
+.footer p,
+.footer li {
+  color: #F5F0EB90 !important;
+  transition: color 0.2s ease;
+}
+
+.footer a:hover {
+  color: #E29E74 !important;
+}
+
+/* ---- Cart drawer ---- */
+.cart-drawer {
+  background: #0A0A0A !important;
+  border-left: 1px solid #E29E7430 !important;
+}
+
+.cart-drawer__title {
+  color: #E29E74 !important;
+  font-family: var(--font-heading) !important;
+}
+
+/* ---- Inputs & forms ---- */
+input[type="text"],
+input[type="email"],
+input[type="search"],
+textarea,
+select {
+  background: #111111 !important;
+  color: #F5F0EB !important;
+  border-color: #E29E7440 !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+  border-color: #E29E74 !important;
+  box-shadow: 0 0 0 3px rgba(226, 158, 116, 0.15) !important;
+  outline: none;
+}
+
+/* ---- Badges / Labels ---- */
+.badge,
+.product-badge {
+  font-family: var(--font-body) !important;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* ---- Marquee / announcement strip ---- */
+.marquee {
+  background: #E29E74 !important;
+  color: #000000 !important;
+}
+
+.marquee__item {
+  color: #000000 !important;
+}
+
+/* ---- Dividers ---- */
+hr,
+.divider {
+  border-color: #E29E7425 !important;
+}
+
+/* ---- Subtle glow on peach elements ---- */
+@keyframes peach-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(226, 158, 116, 0.3); }
+  50%       { box-shadow: 0 0 16px 4px rgba(226, 158, 116, 0.15); }
+}
+
+.button--primary:focus-visible {
+  animation: peach-pulse 2s infinite;
+}
+
+/* ---- Mobile adjustments ---- */
+@media (max-width: 768px) {
+  h1 { font-size: 2.2rem !important; }
+  h2 { font-size: 1.8rem !important; }
+}
