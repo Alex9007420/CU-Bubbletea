@@ -1,0 +1,6 @@
+{
+  "name": "cu-bubbletea-app-config",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Shopify app config for the CU-Bubbletea custom app — used only to push access scopes via `shopify app deploy`. Not a real app implementation."
+}
